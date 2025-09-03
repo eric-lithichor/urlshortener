@@ -61,7 +61,7 @@ while (looping)
 
                 UrlGenerator.DeleteShortenedUrl(shortUrl);
 
-                Console.WriteLine($"{url}/{shortUrl} was deleted.\n");
+                Console.WriteLine($"\n{url}/{shortUrl} was deleted.\n");
                 break;
             case 4:
                 Console.WriteLine("Enter the shortened URL:");
@@ -69,20 +69,20 @@ while (looping)
 
                 longUrl = UrlGenerator.GetLongUrl(shortUrl);
 
-                Console.WriteLine($"Your long URL is {longUrl}.\n");
+                Console.WriteLine($"\nYour long URL is {longUrl}.\n");
                 break;
             case 5:
                 Console.WriteLine("Enter the short URL you want to see statistics for:");
                 shortUrl = Console.ReadLine();
 
                 clicks = UrlGenerator.GetStatisticsForShortUrl(shortUrl);
-                Console.WriteLine($"The {url}/{shortUrl} URL was clicked {clicks} times.\n");
+                Console.WriteLine($"\nThe {url}/{shortUrl} URL was clicked {clicks} times.\n");
                 break;
             case 6:
-                Console.WriteLine("Good bye.");
+                Console.WriteLine("\nGood bye.\n");
                 break;
             default:
-                Console.WriteLine("Not a valid selection");
+                Console.WriteLine("\nNot a valid selection\n");
                 break;
         }
     }
